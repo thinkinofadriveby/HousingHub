@@ -3,6 +3,17 @@ h1 {
 }
 
 .propImage {
-    height: 250px;
+    width: auto;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
 }
+
+.card {
+    width: auto;
+    border: 2px solid black;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+
 
