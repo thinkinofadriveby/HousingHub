@@ -24,7 +24,7 @@ export class HousingService {
   //     })
   //   );
   // }
-  
+
     getAllProperties(): Observable<IProperty[]> {
       return this.http.get<IProperty[]>('assets/data/properties.json');
     }
