@@ -17,17 +17,21 @@ export class PropertyListComponent implements OnInit {
   
   constructor(private route: ActivatedRoute, private housingService: HousingService) { }
 
-  ngOnInit(): void {
-
-    if (this.route.snapshot.url.toString()) {
-      this.SellRent = 2; // Means we are on rent-property URL else we are base URL
-    }
-    this.housingService.getAllProperties(this.SellRent).subscribe(
-      data=> {
-        this.properties = data;
-      }, error => {
-        console.log(error);
+  ngOnInit() {
+    this.route.url.subscribe(url => {
+      let sellRent = 2; // Default value for renting properties
+      if (url[0].path === "buy-property") {
+        sellRent = 1;
       }
-    )
+      this.housingService.getAllProperties(sellRent).subscribe(
+        data => {
+          this.properties = data;
+          console.log(data);
+        }, error => {
+          console.log('httperror:');
+          console.log(error);
+        }
+      );
+    });
   }
-}
+}  

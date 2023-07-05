@@ -1,0 +1,28 @@
+.main-page {
+    text-align: center;
+}
+
+.banner {
+    background-color: lightsteelblue;
+    padding: 50px 0;
+}
+
+.slider {
+    background-color: lightcyan;
+    padding: 50px 0;
+}
+
+.properties-list {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.info-section {
+    background-color: cornsilk;
+    padding: 50px 0;
+}
+
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}

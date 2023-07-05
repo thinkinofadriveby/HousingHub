@@ -51,6 +51,33 @@
       "Type": "Mansion",
       "Price": 50000,
       "Image": "prop-6"
+    },
+
+    {
+      "Id": 7,
+      "SellRent": 1,
+      "Name": "Dawnstar Estate",
+      "Type": "Villa",
+      "Price": 72000,
+      "Image": ""
+    },
+
+    {
+      "Id": 8,
+      "SellRent": 1,
+      "Name": "Hindarsfyall View",
+      "Type": "Estate",
+      "Price": 64000,
+      "Image": "prop-7"
+    },
+
+    {
+      "Id": 9,
+      "SellRent": 2,
+      "Name": "Ragged Perth",
+      "Type": "House",
+      "Price": 16000,
+      "Image": ""
     }
   
   ]

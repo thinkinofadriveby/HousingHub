@@ -11,9 +11,11 @@ import { HousingService } from './services/housing.service';
 import { AddPropertyComponent } from './property/add-property/add-property.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
+import { StartingPageComponent } from './property/starting-page/starting-page.component';
 
 const appRoutes : Routes = [
-  { path: '', component: PropertyListComponent },
+  { path: '', component: StartingPageComponent },
+  { path: 'buy-property', component: PropertyListComponent },
   { path: 'rent-property', component: PropertyListComponent },
   { path: 'add-property', component: AddPropertyComponent },
   { path: 'property-details/:id', component: PropertyDetailComponent },
