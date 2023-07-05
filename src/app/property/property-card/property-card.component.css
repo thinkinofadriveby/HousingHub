@@ -44,4 +44,12 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
+.prop-image {
+    height: 270px;
+    width: auto;
+    object-fit: cover;
+}
 
+.house-default { 
+    height: 300px;
+}

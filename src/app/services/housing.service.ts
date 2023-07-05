@@ -25,9 +25,12 @@ export class HousingService {
   //   );
   // }
 
-    getAllProperties(): Observable<IProperty[]> {
-      return this.http.get<IProperty[]>('assets/data/properties.json');
-    }
+  getAllProperties(SellRent: number): Observable<IProperty[]> {
+    return this.http.get<IProperty[]>('assets/data/properties.json').pipe(
+      map(properties => properties.filter(property => property.SellRent === SellRent))
+    );
+  }
+  
   
 
 }
