@@ -1,0 +1,16 @@
+.save-btn {
+    margin-right: 6px;
+    margin-top: 1rem;
+}
+
+.cancel-btn {
+    margin-top: 1rem;
+}
+
+.ng-invalid.ng-touched {
+    border-color: red;
+}
+
+.error-block {
+    color: red;
+}
