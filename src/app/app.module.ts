@@ -15,6 +15,7 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 import { StartingPageComponent } from './property/starting-page/starting-page.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { UserServiceService } from './services/user-service.service';
 
 const appRoutes : Routes = [
   { path: '', component: StartingPageComponent },
@@ -47,7 +48,8 @@ const appRoutes : Routes = [
     FormsModule
   ],
   providers: [
-    HousingService
+    HousingService,
+    UserServiceService
   ],
   bootstrap: [AppComponent]
 })
