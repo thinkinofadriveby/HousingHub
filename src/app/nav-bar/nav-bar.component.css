@@ -20,10 +20,10 @@
     margin-right: 5rem;
 }
 
-.dropdown-item {
-    cursor: pointer;
+.dropdown-toggle {
+    text-decoration: none;
 }
 
-.congrats {
-    text-decoration: none;
+.dropdown-item {
+    cursor: pointer;
 }
