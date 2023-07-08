@@ -29,10 +29,26 @@
             routerLinkActive="active"
             >Login</a>
           </li>
-          <li *ngIf="loggedIn()"class="nav-item">
+          <!-- <li *ngIf="loggedIn()"class="nav-item">
             <a class="nav-link login" (click)="onLogout()"
             >Log out</a>
-          </li>
+          </li> -->
+          <div *ngIf="loggedIn()" class="dropdown mr-5">
+            <a href="#" class="dropdown-toggle text-light congrats" (click)="false" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+              Welcome, {{ loggedInUser }}!
+            </a>
+            <div class="dropdown-menu" [ngClass]="{'show': showDropdown}" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+              <a href="#" class="dropdown-item">
+                <i class="fa-sharp fa-solid fa-chart-simple"></i> View Dashboard</a>
+              <a href="#" class="dropdown-item">
+                <i class="fa-solid fa-user"></i> My Profile</a>
+              <a href="#" class="dropdown-item">
+                <i class="fa-solid fa-key"></i> Change Password</a>
+              <a (click)="onLogout()" class="dropdown-item">
+                <i class="fas fa-sign-out-alt"></i> Log out</a>
+            </div>
+          </div>
+          
         </ul>
       </div>
     </div>

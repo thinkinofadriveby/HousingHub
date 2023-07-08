@@ -15,3 +15,15 @@
 .login {
     margin-right: 1rem;
 }
+
+.dropdown {
+    margin-right: 5rem;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.congrats {
+    text-decoration: none;
+}
