@@ -13,17 +13,17 @@ export class NavBarComponent implements OnInit {
   constructor(private alertify: AlertifyService) { }
 
   ngOnInit() {
-    this.showDropdown = false;
   }
 
   loggedIn() {
-    this.loggedInUser = localStorage.getItem('token'); 
+    this.loggedInUser = localStorage.getItem('token');
     return this.loggedInUser;
   }
 
   onLogout() {
-    this.showDropdown = false;
     localStorage.removeItem('token');
     localStorage.removeItem('userName');
-    this.alertify.success('✈️ Logged out!');  }
+    this.showDropdown = false;
+    this.alertify.success('✈️ Logged out!');
+}
 }
