@@ -1,12 +1,35 @@
+<h2 class="hdr">Please, provide full information about the house</h2>
+<br/> <br/>
 <div class="card">
   <div class="card-header"> 
-      Add new property
+      List your property
   </div>
   <div class="card-body">
-    <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
+    <ul id="myTab" class="nav nav-underline">
+      
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="javascript:void(0)">Basic information</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Pricing and area</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Address</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Other details</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Upload images</a>
+      </li>
+      
+  </ul>
+  
+  
 
-      <div class="form-group col-12">
-        <label for="name">
+    <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
+      <div class="form-group col-12 name">
+        <label for="name" class="name">
           Name
         </label>
         <input type="text" class="form-control" #Name="ngModel"
@@ -18,24 +41,22 @@
       </div>
 
       <div class="form-group col-12">
-        <label for="type">
+        <label for="type" class="type">
           Type
         </label>
         <input type="text" class="form-control" ngModel name="Type">
       </div>
 
       <div class="form-group col-12">
-        <label for="price">
+        <label for="price" class="price">
           Price
         </label>
         <input type="text" class="form-control" ngModel name="Price">
       </div>
       
-      <div class="form-group col-12">
-        <button type="submit" class="btn btn-primary save-btn">Save</button>
-        <button type="reset" class="btn btn-primary cancel-btn">Cancel</button>
+      <div class="form-group col-12 btn-div">
+        <button type="button" class="btn btn-primary next-btn btn-block">Next</button>
       </div>
-
     </form>      
   </div>
 </div>

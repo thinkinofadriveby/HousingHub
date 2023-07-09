@@ -14,6 +14,7 @@ export class AddPropertyComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
   onBack() 
   {
@@ -27,3 +28,4 @@ export class AddPropertyComponent implements OnInit {
   }
 
 }
+
