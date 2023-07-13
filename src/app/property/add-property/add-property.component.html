@@ -5,58 +5,47 @@
       List your property
   </div>
   <div class="card-body">
-    <ul id="myTab" class="nav nav-underline">
-      
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="javascript:void(0)">Basic information</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Pricing and area</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Address</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Other details</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Upload images</a>
-      </li>
-      
-  </ul>
-  
-  
-
     <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
-      <div class="form-group col-12 name">
-        <label for="name" class="name">
-          Name
-        </label>
-        <input type="text" class="form-control" #Name="ngModel"
-         ngModel name="Name" required minlength="5">
-        <span *ngIf="!Name.valid && Name.touched" class="error-block">
-          <span *ngIf="Name.errors && Name.errors['required']">Name field is required</span>
-          <span *ngIf="Name.errors && Name.errors['minlength']">Name should be at least 5 characters long</span>
-        </span>
-      </div>
-
-      <div class="form-group col-12">
-        <label for="type" class="type">
-          Type
-        </label>
-        <input type="text" class="form-control" ngModel name="Type">
-      </div>
-
-      <div class="form-group col-12">
-        <label for="price" class="price">
-          Price
-        </label>
-        <input type="text" class="form-control" ngModel name="Price">
-      </div>
+      <div>
+        <tabset>
+          <tab heading="Basic information">
+            <div class="form-group col-12 name">
+              <label for="name" class="name">
+                Name
+              </label>
+              <input type="text" class="form-control" #Name="ngModel"
+               ngModel name="Name" required minlength="5">
+              <span *ngIf="!Name.valid && Name.touched" class="error-block">
+                <span *ngIf="Name.errors && Name.errors['required']">Name field is required</span>
+                <span *ngIf="Name.errors && Name.errors['minlength']">Name should be at least 5 characters long</span>
+              </span>
+            </div>
       
-      <div class="form-group col-12 btn-div">
-        <button type="button" class="btn btn-primary next-btn btn-block">Next</button>
+            <div class="form-group col-12">
+              <label for="type" class="type">
+                Type
+              </label>
+              <input type="text" class="form-control" ngModel name="Type">
+            </div>
+      
+            <div class="form-group col-12">
+              <label for="price" class="price">
+                Price
+              </label>
+              <input type="text" class="form-control" ngModel name="Price">
+            </div>
+            
+            <div class="form-group col-12 btn-div">
+              <button type="button" class="btn btn-primary next-btn btn-block">Next</button>
+            </div>
+          </tab>
+          <tab heading="Pricing and area">Pricing and area</tab>
+          <tab heading="Address">Address</tab>
+          <tab heading="Other details">Other details</tab>
+          <tab heading="Upload images">Upload images</tab>
+        </tabset>
       </div>
+       
     </form>      
   </div>
 </div>
