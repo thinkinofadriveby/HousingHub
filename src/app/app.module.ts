@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -50,7 +52,8 @@ const appRoutes : Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    ButtonsModule.forRoot()
   ],
   providers: [
     HousingService,
