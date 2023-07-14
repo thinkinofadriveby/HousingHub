@@ -2,13 +2,14 @@
 <br/> <br/>
 <div class="card">
   <div class="card-header">
-    List your Property
+    List your property
   </div>
   <div class="card-body">
     <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
       <div>
         <tabset #formTabs>
-          <tab heading="Basic Info">
+          <tab heading="Basic Info" customClass="customClass"> 
+         
               <div class="form-group col-12" >
                 <p class="mt-2 mb-2">I want to</p>
                 <div class="btn-group mb-4" btnRadioGroup>
@@ -71,7 +72,7 @@
               </div>
           </tab>
 
-          <tab heading="Pricing and Area">
+          <tab heading="Pricing and Area" customClass="customClass">
               <div class="form-group col-12">
                 <label class="price">Price, <em>$</em></label>
                 <input type="text" class="form-control">
@@ -106,7 +107,7 @@
               </div>
           </tab>
 
-          <tab heading="Address">
+          <tab heading="Address" customClass="customClass">
 
             <div class="form-group col-12">
               <label>Floor</label>
@@ -137,7 +138,7 @@
               </div>
           </tab>
 
-          <tab heading="Other Details">
+          <tab heading="Other Details" customClass="customClass">
             <div class="form-group col-12" >
               <p class="mt-2 mb-2">Ready to move</p>
               <div class="btn-group mb-4" btnRadioGroup>
@@ -148,11 +149,11 @@
             
 
             <div class="form-group col-3">
-              <label>Possession/Available From</label>
+              <label class="mb-2">Available from</label>
               <input type="text"
               placeholder="Select a day"
-              class="form-control"
-              bsDatepicker>
+              class="form-control mb-4"
+              bsDatepicker [bsConfig]="{ dateInputFormat: 'MM-DD-YYYY'}">
             </div>
 
             <div class="form-group col-12">
@@ -171,10 +172,10 @@
             <div class="form-group col-12" >
               <p class="mt-2 mb-2">Main entrance</p>
               <div class="btn-group mb-4" btnRadioGroup>
-                <label class="btn btn-outline-primary radio custom-radio-button " role="button">East</label>
-                <label class="btn btn-outline-primary custom-radio-button" role="button">West</label>
-                <label class="btn btn-outline-primary radio custom-radio-button " role="button">South</label>
-                <label class="btn btn-outline-primary custom-radio-button" role="button">North</label>
+                <label class="btn btn-outline-primary radio custom-radio-button" btnRadio=1  role="button">East</label>
+                <label class="btn btn-outline-primary custom-radio-button" btnRadio=2 role="button">West</label>
+                <label class="btn btn-outline-primary radio custom-radio-button" btnRadio=3 role="button">South</label>
+                <label class="btn btn-outline-primary custom-radio-button" btnRadio=4 role="button">North</label>
               </div>
             </div>
 
@@ -192,7 +193,7 @@
              </div>
           </tab>
 
-          <tab heading="Photos">
+          <tab heading="Photos" customClass="customClass">
             <div class="form-group col-12">
               <div class="photo-control">
                   <button class="mt-5" type="button">Upload</button> <br>
