@@ -40,6 +40,11 @@ h1 {
     opacity: 1;
 }
 
+.card-body h4 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+}
+
 .animate {
     transition: all 0.3s ease-in-out;
 }
@@ -56,4 +61,25 @@ h1 {
 
 .price {
     color: #5EB94E;
+    margin: 0 4px;
+}
+
+.descr {
+    display: flex;
+    justify-content: center;
+    margin-right: 2px;
+}
+
+.font-highlight {
+    color: #96AC92;
+    margin: 0 4px;
+}
+
+.price-and-area {
+    display: flex;
+    justify-content: center; 
+}
+
+.location {
+    margin-top: 4px;
 }

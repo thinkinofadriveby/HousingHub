@@ -8,11 +8,11 @@
     <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
       <div class="tab-panel">
         <tabset class="members-tabset" #formTabs>
-          <tab heading="Basic Info" customClass="customClass"> 
+          <tab heading="Basic Info" customClass="customClass" ngModelGroup="BasicInfo" #BasicInfo="ngModelGroup"> 
          
               <div class="form-group col-12" >
                 <p class="mt-2 mb-2">I want to</p>
-                <div class="btn-group mb-4" btnRadioGroup>
+                <div class="btn-group mb-4" btnRadioGroup ngModel name="SellRent" required>
                   <label class="btn btn-outline-primary radio custom-radio-button " btnRadio=1 role="button" name="SellRent">Sell</label>
                   <label class="btn btn-outline-primary custom-radio-button" btnRadio=2 role="button" name="SellRent">Rent</label>
                 </div>
@@ -73,7 +73,7 @@
 
               <div class="form-group col-12">
                   <button type="button" class="btn btn-primary btn-block next-btn"
-                  (click)="selectTab(1)">Next</button>
+                  (click)="selectTab(1)" [disabled]="!BasicInfo.valid">Next</button>
               </div>
           </tab>
 
