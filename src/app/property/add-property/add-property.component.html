@@ -6,8 +6,8 @@
   </div>
   <div class="card-body">
     <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
-      <div>
-        <tabset #formTabs>
+      <div class="tab-panel">
+        <tabset class="members-tabset" #formTabs>
           <tab heading="Basic Info" customClass="customClass"> 
          
               <div class="form-group col-12" >
@@ -31,7 +31,7 @@
               <div class="form-group col-12" >
                 <p class="mb-2">Property type</p>
                   <div class="btn-group mb-4" btnRadioGroup name="propType"
-                  [(ngModel)]="propertyView.Type">
+                  [(ngModel)]="propertyView.PType">
                     <label 
                     *ngFor="let ptype of propertyTypes" 
                     class="btn btn-outline-primary mr-2 radio custom-radio-button" 
@@ -219,7 +219,7 @@
   <div class="card-header">
   <h3 class="preview">Property preview</h3>
   <div>
-    <app-property-card [property]="propertyView"></app-property-card>
+    <app-property-card [property]="propertyView" [hideIcons]="true"></app-property-card>
   </div>
   </div>
 </div>

@@ -53,3 +53,7 @@ h1 {
 .house-default { 
     padding-left: 25px; 
 }
+
+.price {
+    color: #5EB94E;
+}
