@@ -12,6 +12,16 @@
     color: black;
 }
 
+.preview {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 2px solid black;
+  
+}
+
 .sbm-btn {
   width: 100%;
   margin-top: 1rem;
@@ -25,12 +35,6 @@
     color: black;
 }
 
-.hdr {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-}
-
 .photo-control {
     min-height: 300px;
     vertical-align: middle;
@@ -38,29 +42,35 @@
     border: 1px dashed #14C164;
     margin: 5px;
 }
-  
-  .custom-radio-button {
-    background-color: white;
-    color: black;
-    border-color: #14C164;
-    margin-right: 4px;
-  }
-  
-  .custom-radio-button.active {
-    background-color: #14C164;
-    color: black;
-    border-color: #14C164;
-  }
 
- .radio {
+.radio {
   display: flex;
   color: black;
  }
 
- .custom-radio-button:hover {
+  
+ .custom-radio-button {
+  background-color: white;
+  color: black;
+  border-color: #14C164;
+  margin-right: 4px;
+}
+
+.custom-radio-button.active {
   background-color: #14C164;
- }
- 
+  color: black;
+  border-color: #14C164;
+}
+
+.custom-radio-button:hover {
+  background-color: #C0FDB5;
+}
+
+.custom-radio-button.active:hover {
+  background-color: #14C164;
+}
+
+
 
 
 
