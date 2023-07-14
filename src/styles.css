@@ -3,5 +3,20 @@
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
 
 .customClass > a {
-    color: #14C164 !important;
+    background-color: #ffffff !important;
+    color: black !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+    margin-bottom: 8px !important;
+    border-radius: 8px !important;
+}
+
+.customClass .nav-link.active {
+    background-color: #14C164 !important;
+    color: black !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.customClass > a:hover {
+    background-color: #E4FFF0 !important;
+    color: black !important;
 }
