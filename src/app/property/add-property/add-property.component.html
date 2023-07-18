@@ -12,7 +12,7 @@
          
               <div class="form-group col-12" >
                 <p class="mt-2 mb-2">I want to</p>
-                <div class="btn-group mb-4" btnRadioGroup formControlName="SellRent">
+                <div class="btn-group" btnRadioGroup formControlName="SellRent">
                   <label class="btn btn-outline-primary radio custom-radio-button " btnRadio=1 role="button" tabindex="0" name="SellRent">Sell</label>
                   <label class="btn btn-outline-primary custom-radio-button" btnRadio=2 role="button" tabindex="0" name="SellRent">Rent</label>
                 </div>
@@ -22,7 +22,7 @@
               </div>
 
               <div class="form-group col-12" >
-                <p class="mb-2">Bedroom, Hall and Kitchen</p>
+                <p class="mb-2 mt-4">Bedroom, Hall and Kitchen</p>
                   <div class="btn-group" btnRadioGroup
                   formControlName="BHK"
                   [(ngModel)]="propertyView.BHK" name="BHK">
