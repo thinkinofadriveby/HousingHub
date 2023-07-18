@@ -19,14 +19,20 @@ export class PropertyListComponent implements OnInit {
 
   ngOnInit() {
     this.route.url.subscribe(url => {
-      let sellRent = 2; // Default value for renting properties
+      this.SellRent = 2; // Default value for renting properties
       if (url[0].path === "buy-property") {
-        sellRent = 1;
+        this.SellRent = 1;
       }
-      this.housingService.getAllProperties(sellRent).subscribe(
+      this.housingService.getAllProperties(this.SellRent).subscribe(
         data => {
           this.properties = data;
           console.log(data);
+
+          const newProperty = JSON.parse(localStorage.getItem('newProp') || '""');
+
+          if (newProperty.SellRent === this.SellRent) {
+            this.properties = [newProperty, ...this.properties];
+          }
         }, error => {
           console.log('httperror:');
           console.log(error);

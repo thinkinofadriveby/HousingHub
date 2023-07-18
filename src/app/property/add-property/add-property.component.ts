@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { IPropertyBase } from 'src/app/model/ipropertybase';
 import { Property } from 'src/app/model/property';
+import { AlertifyService } from 'src/app/services/alertify.service';
 import { HousingService } from 'src/app/services/housing.service';
 
 
@@ -40,7 +41,8 @@ export class AddPropertyComponent implements OnInit {
   };
   constructor(private fb: FormBuilder, 
               private router: Router,
-              private housingService: HousingService) { }
+              private housingService: HousingService,
+              private alertify: AlertifyService) { }
 
   ngOnInit() {
     this.CreateAddPropertyForm();
@@ -94,11 +96,18 @@ export class AddPropertyComponent implements OnInit {
     if (this.allTabsValid()) {
       this.mapProperty();
       this.housingService.addProperty(this.property);
-      console.log('Congratulations, form submitted!');
+      this.alertify.success('✅ Listed successfully!');
       console.log(this.addPropertyForm);
+
+      if (this.SellRent.value === '2') {
+        this.router.navigate(['/rent-property']);
+      }
+      else {
+        this.router.navigate(['/buy-property']);
+      }
     }
     else {
-      console.log('Please, provide all required fields!');
+      this.alertify.error('❌ Provide all required fields!');
     }
   }
 
