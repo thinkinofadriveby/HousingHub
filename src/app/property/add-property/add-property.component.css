@@ -8,8 +8,9 @@
 .back-btn {
     margin-top: 1rem;
     width: 100%;
-    background-color: #AFBFC1;
-    color: black;
+    background-color: #AFBFC1 !important;
+    color: black !important;
+    border: 2px solid black !important; 
 }
 
 .preview {
@@ -25,49 +26,52 @@
 .sbm-btn {
   width: 100%;
   margin-top: 1rem;
-  background-color: #14C164;
+  background-color: #14C164 !important;
+  border: 2px solid black !important;
+  color: black !important;
 }
 
 .next-btn {
     margin-top: 1rem;
     width: 100%;
-    background-color: #14C164;
-    color: black;
+    background-color: #14C164 !important;
+    color: black !important;
+    border: 2px solid black !important;
 }
 
 .photo-control {
     min-height: 300px;
     vertical-align: middle;
     text-align: center;
-    border: 1px dashed #14C164;
+    border: 1px dashed #14C164 !important;
     margin: 5px;
 }
 
 .radio {
   display: flex;
-  color: black;
+  color: black !important;
  }
 
   
  .custom-radio-button {
-  background-color: white;
-  color: black;
-  border-color: #14C164;
+  background-color: white !important;
+  color: black !important;
+  border-color: #14C164 !important;
   margin-right: 4px;
 }
 
 .custom-radio-button.active {
-  background-color: #14C164;
-  color: black;
-  border-color: #14C164;
+  background-color: #14C164 !important;
+  color: black !important;
+  border-color: #14C164 !important;
 }
 
 .custom-radio-button:hover {
-  background-color: #C0FDB5;
+  background-color: #C0FDB5 !important;
 }
 
 .custom-radio-button.active:hover {
-  background-color: #14C164;
+  background-color: #14C164 !important;
 }
 
 
