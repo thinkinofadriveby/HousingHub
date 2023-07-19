@@ -36,4 +36,12 @@
     display: inline-block;
     margin-bottom: 20px; 
 }
+
+.price {
+    color: #5EB94E;
+}
+
+.fs {
+    font-style: italic;
+}
   
