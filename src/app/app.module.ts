@@ -25,6 +25,7 @@ import { UserServiceService } from './services/user-service.service';
 import { AlertifyService } from './services/alertify.service';
 import { AuthService } from './services/auth.service';
 import { PropertyDetailResolverService } from './property/property-detail/property-detail-resolver.service';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 const appRoutes : Routes = [
   { path: '', component: StartingPageComponent },
@@ -59,7 +60,8 @@ const appRoutes : Routes = [
     TabsModule.forRoot(),
     ButtonsModule.forRoot(),
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgxGalleryModule
   ],
   providers: [
     HousingService,
