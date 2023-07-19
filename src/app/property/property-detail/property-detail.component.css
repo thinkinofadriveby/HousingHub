@@ -31,4 +31,9 @@
 .space {
     margin-right: 4px;
 }
+
+.ngx-gallery { 
+    display: inline-block;
+    margin-bottom: 20px; 
+}
   
