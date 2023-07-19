@@ -21,7 +21,9 @@
     
         <h6  class="mt-2 descr">{{property.FType}}
         <span *ngIf="property.FType !== 'Unfurnished'">-furnished</span>
-        <span *ngIf="property.ReadyToMove" class="rtm"> | Ready to Move</span>
+        <span *ngIf="property.ReadyToMove == 1" class="rtm"> | Ready to Move</span>
+        <span *ngIf="property.ReadyToMove == 2" class="rtm">
+             | {{ isDatePast(property.Possession) ? 'Ready to move' : 'Released on ' + (property.Possession | date:'dd-MM-yyyy') }}</span>
         </h6>
     
         <hr class="mt-0 mb-2">

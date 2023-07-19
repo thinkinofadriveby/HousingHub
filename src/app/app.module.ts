@@ -6,6 +6,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DatePipe } from '@angular/common';
+
 
 
 
@@ -68,7 +70,8 @@ const appRoutes : Routes = [
     UserServiceService,
     AlertifyService,
     AuthService,
-    PropertyDetailResolverService
+    PropertyDetailResolverService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

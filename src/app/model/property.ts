@@ -17,7 +17,7 @@ export class Property implements IPropertyBase {
     TotalFloor?: string;
     ReadyToMove!: number;
     AOP?: string;
-    MainEntrance?: string;
+    MainEntrance?: number;
     Security?: number;
     Gated?: number;
     Maintenance?: number;

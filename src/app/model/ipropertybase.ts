@@ -8,6 +8,7 @@ export interface IPropertyBase {
     BuiltArea: number | null;
     City: string | null;
     ReadyToMove: number | null;
+    Possession?: string;
     Price : number | null;
     Image ?: string;
 }

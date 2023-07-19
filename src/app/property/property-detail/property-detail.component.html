@@ -19,8 +19,8 @@
                   {{property.BuiltArea}} square meters
               </div>
               <div class="card-info">
-                  <strong class="space">Carpet Area: </strong>
-                  {{property.CarpetArea}} square meters
+                <strong class="space">Carpet Area: </strong>
+                {{ property.CarpetArea ? property.CarpetArea + ' square meters' : '-' }}                
               </div>
               <div class="card-info">
                   <strong class="space">Furnishing Type: </strong>
@@ -44,54 +44,65 @@
       <div class="tab-panel p-3">
           <tabset class="member-tabset">
               <tab heading="Overview" customClass="customClass">
-                <h1>Overview</h1>
           <div class="row">
               <div class="col-sm-6">
-                  <div class="heading">
-                      <strong>Project Name</strong>
-                      <p>{{property.Name}}</p>
+                  <div class="heading mb-4">
+                      <strong>Landmark</strong>
+                      <p>{{ property.Address2 ? property.Address2 : '-' }}</p>
                   </div>
 
-                  <div class="heading">
+                  <div class="heading mb-4">
                       <strong>Floor Number</strong>
-                      <p>{{property.FloorNo}}</p>
+                      <p>{{ property.FloorNo ? property.FloorNo : '-' }}</p>
                   </div>
 
-                  <div class="heading">
+                  <div class="heading mb-4">
                       <strong>Age of Property</strong>
-                      <p>{{property.AOP}}</p>
+                      <p>{{ property.AOP ? property.AOP : '-' }}</p>
                   </div>
 
-                  <div class="heading">
-                      <strong>Posession</strong>
-                      <p>{{property.Possession}}</p>
+                  <div class="heading mb-4">
+                    <strong>Available from</strong>
+
+                    <p *ngIf="property.ReadyToMove == 1">Ready to move</p>
+                    <p *ngIf="property.ReadyToMove == 2">
+                      {{ property.Possession ? (property.Possession | date:'dd-MM-yyyy') : '-' }}
+                    </p>
+                    <p *ngIf="property.ReadyToMove != 1 && property.ReadyToMove != 2">-</p>
                   </div>
               </div>
 
               <div class="col-sm-6">
-                  <div class="heading">
+                  <div class="heading mb-4">
                       <strong>Main Entrance</strong>
-                      <p>{{property.MainEntrance}}</p>
+                      <p>
+                        {{ 
+                          property.MainEntrance == 1 ? 'East' :
+                          property.MainEntrance == 2 ? 'West' :
+                          property.MainEntrance == 3 ? 'South' :
+                          property.MainEntrance == 4 ? 'North' : '-'
+                        }}
+                      </p>
                   </div>
 
-                  <div class="heading">
+                  <div class="heading mb-4">
                       <strong>Gated Community</strong>
-                      <p>{{property.Gated}}</p>
+                      <p>{{ property.Gated ? property.Gated : '-' }}</p>
                   </div>
 
-                  <div class="heading">
+                  <div class="heading mb-4">
                       <strong>Security Deposit</strong>
-                      <p>{{property.Security}}</p>
+                      <p>{{ property.Security ? property.Security : '-' }}</p>
                   </div>
-                  <div class="heading">
+                  <div class="heading mb-4">
                       <strong>Maintenance</strong>
-                      <p>{{property.Maintenance}}</p>
+                      <p>{{ property.Maintenance ? property.Maintenance : '-' }}</p>
                   </div>
               </div>
               <div class="col-sm-12">
-                  <div class="heading">
+                  <div class="heading mb-4">
                       <strong>About Property</strong>
-                      <p>{{property.Description}}</p>
+                      <p>{{ property.Description ? property.Description : '-' }}</p>
                   </div>
               </div>
             </div>
@@ -99,11 +110,8 @@
 
               <tab heading="Address" customClass="customClass">
                 <div class="col-sm-12">
-                  <h1>Address</h1>
                   <div class="heading">
-                      <strong>{{property.Address}}</strong><br/>
-                      <strong>{{property.Address2}}</strong><br/>
-                      <strong>{{property.City}}</strong>
+                      Address: <strong>{{property.City}}, {{property.Address}}</strong>
                   </div>
                   </div>
               </tab>
