@@ -6,25 +6,26 @@
               <img *ngIf="!property.Image" class="card-img-top image" src="assets/images/house_default.jpg">
           </div>
           <div class="card-body">
-              <h1 class="card-title">{{property.Name}}</h1>
-              <div>
+              <h1 class="card-title card-info">{{property.Name}}</h1>
+              <div class="card-info">
                   <strong>{{property.BHK}} BHK, {{property.PType}}, {{property.Price}}$</strong>
               </div>
-              <div>
+              <div class="card-info">
                   <strong>in {{property.City}}</strong>
               </div>
               <hr>
-              <div>
-                  <strong>Build Area:</strong>
+              <div class="card-info">
+                  <strong class="space">Build Area: </strong>
                   {{property.BuiltArea}} square meters
               </div>
-              <div>
-                  <strong>Carpet Area:</strong>
+              <div class="card-info">
+                  <strong class="space">Carpet Area: </strong>
                   {{property.CarpetArea}} square meters
               </div>
-              <div>
-                  <strong>Furnishing Type:</strong>
-                  {{property.FType}}
+              <div class="card-info">
+                  <strong class="space">Furnishing Type: </strong>
+                  <div *ngIf="property.FType !== 'Unfurnished'">{{property.FType}}-furnished</div>
+                  <div *ngIf="property.FType == 'Unfurnished'">Unfurnished</div>
               </div>
           </div>
 
