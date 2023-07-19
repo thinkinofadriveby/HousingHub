@@ -81,5 +81,12 @@ export class PropertyDetailComponent implements OnInit {
     
   }
 
+  Today: Date = new Date();
+
+    isDatePast(d?: string): boolean {
+        if (!d) return false;
+        return new Date(d) <= this.Today;
+    }
+
 
 }
