@@ -2,28 +2,29 @@
   <div class="col-sm-4 p-0">
       <div class="card">
           <div class="card-img-wrapper">
-              <img class="card-img-top image" src="assets/images/prop-1.jpg">
+              <img *ngIf="property.Image" class="card-img-top image" src="assets/images/{{property.Image}}.jpg">
+              <img *ngIf="!property.Image" class="card-img-top image" src="assets/images/house_default.jpg">
           </div>
           <div class="card-body">
-              <h1 class="card-title">Abandoned paradise</h1>
+              <h1 class="card-title">{{property.Name}}</h1>
               <div>
-                  <strong>2 BHK, House, 18000$</strong>
+                  <strong>{{property.BHK}} BHK, {{property.PType}}, {{property.Price}}$</strong>
               </div>
               <div>
-                  <strong>in Miami</strong>
+                  <strong>in {{property.City}}</strong>
               </div>
               <hr>
               <div>
                   <strong>Build Area:</strong>
-                  450 square meters
+                  {{property.BuiltArea}} square meters
               </div>
               <div>
                   <strong>Carpet Area:</strong>
-                  320 square meters
+                  {{property.CarpetArea}} square meters
               </div>
               <div>
                   <strong>Furnishing Type:</strong>
-                  Fully-furnished
+                  {{property.FType}}
               </div>
           </div>
 
@@ -42,18 +43,75 @@
       <div class="tab-panel">
           <tabset class="member-tabset">
               <tab heading="Overview" customClass="customClass">
+                <h1>Overview</h1>
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="heading">
+                      <strong>Project Name</strong>
+                      <p>{{property.Name}}</p>
+                  </div>
 
+                  <div class="heading">
+                      <strong>Floor Number</strong>
+                      <p>{{property.FloorNo}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Age of Property</strong>
+                      <p>{{property.AOP}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Posession</strong>
+                      <p>{{property.Possession}}</p>
+                  </div>
+              </div>
+
+              <div class="col-sm-6">
+                  <div class="heading">
+                      <strong>Main Entrance</strong>
+                      <p>{{property.MainEntrance}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Gated Community</strong>
+                      <p>{{property.Gated}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Security Deposit</strong>
+                      <p>{{property.Security}}</p>
+                  </div>
+                  <div class="heading">
+                      <strong>Maintenance</strong>
+                      <p>{{property.Maintenance}}</p>
+                  </div>
+              </div>
+              <div class="col-sm-12">
+                  <div class="heading">
+                      <strong>About Property</strong>
+                      <p>{{property.Description}}</p>
+                  </div>
+              </div>
+            </div>
               </tab>
 
               <tab heading="Address" customClass="customClass">
-
+                <div class="col-sm-12">
+                  <h1>Address</h1>
+                  <div class="heading">
+                      <strong>{{property.Address}}</strong><br/>
+                      <strong>{{property.Address2}}</strong><br/>
+                      <strong>{{property.City}}</strong>
+                  </div>
+                  </div>
               </tab>
 
               <tab heading="Photos" customClass="customClass">
                   <h1>Photos</h1>
               </tab>
 
-              <tab heading="Contact" customClass="customClass">
+              <tab heading="Contact info" customClass="customClass">
                   <h1>Contact Detail</h1>
                   This should be restricted area and only registered user should be able to see seller contact details
               </tab>
