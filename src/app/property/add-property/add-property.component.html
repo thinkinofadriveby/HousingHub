@@ -79,7 +79,7 @@
               </div>
 
               <div class="form-group col-12">
-                <label class="price mb-2 mt-2">City</label>
+                <label class="price mb-2 mt-4">City</label>
                 <input type="text" class="form-control"
                 formControlName="City"
                 [(ngModel)]="propertyView.City">
@@ -95,7 +95,7 @@
               </div>
           </tab>
 
-          <tab heading="Pricing and Area" customClass="customClass" formGroupName="PriceInfo">
+          <tab heading="Pricing and Area" customClass="customClass" formGroupName="PriceInfo" [disabled]="!BasicInfo.valid">
               <div class="form-group col-12">
                 <label *ngIf="SellRent.value == 1" class="price">Price, <em>$</em></label>
                 <label *ngIf="SellRent.value == 2" class="price">Rent, <em>$</em></label>
@@ -152,7 +152,7 @@
               </div>
           </tab>
 
-          <tab heading="Address" customClass="customClass" formGroupName="AddressInfo">
+          <tab heading="Address" customClass="customClass" formGroupName="AddressInfo" [disabled]="!PriceInfo.valid">
 
             <div class="form-group col-12">
               <label class="mt-1 mb-2">Floor</label>
@@ -195,7 +195,7 @@
               </div>
           </tab>
 
-          <tab heading="Other Details" customClass="customClass" formGroupName="OtherInfo">
+          <tab heading="Other Details" customClass="customClass" formGroupName="OtherInfo" [disabled]="!AddressInfo.valid">
             <div class="form-group col-12" >
               <p class="mt-2 mb-2">Ready to move</p>
               <div class="btn-group" btnRadioGroup formControlName="RTM">
@@ -257,7 +257,7 @@
              </div>
           </tab>
 
-          <tab heading="Photos" customClass="customClass">
+          <tab heading="Photos" customClass="customClass" [disabled]="!AddressInfo.valid">
             <div class="form-group col-12">
               <div class="photo-control">
                   <button class="mt-5" type="button">Upload</button> <br>

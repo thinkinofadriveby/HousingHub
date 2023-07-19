@@ -161,10 +161,10 @@ export class AddPropertyComponent implements OnInit {
     this.property.PostedOn = new Date().toString();
   } 
 
-  selectTab(tabId: number, isCurrentTabValid: boolean) {
+  selectTab(NextTabId: number, IsCurrentTabValid: boolean) {
     this.nextClicked = true;
-    if (isCurrentTabValid && this.formTabs) {
-      this.formTabs.tabs[tabId].active = true;
+    if (IsCurrentTabValid) {
+      this.formTabs!.tabs[NextTabId].active = true;
     }
   }
 
