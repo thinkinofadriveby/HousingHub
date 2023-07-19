@@ -23,4 +23,12 @@
     margin-right: 4px;
 }
 
+.card-info {
+    display: flex;
+    justify-content: center;
+}
+
+.space {
+    margin-right: 4px;
+}
   
