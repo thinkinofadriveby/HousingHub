@@ -1,14 +1,63 @@
-<p>
-  property-detail works!
-  Selected property ID is {{propertyId}}
-  <br/> <br/>
+<div class="row shadow wrapper">
+  <div class="col-sm-4 p-0">
+      <div class="card">
+          <div class="card-img-wrapper">
+              <img class="card-img-top image" src="assets/images/prop-1.jpg">
+          </div>
+          <div class="card-body">
+              <h1 class="card-title">Abandoned paradise</h1>
+              <div>
+                  <strong>2 BHK, House, 18000$</strong>
+              </div>
+              <div>
+                  <strong>in Miami</strong>
+              </div>
+              <hr>
+              <div>
+                  <strong>Build Area:</strong>
+                  450 square meters
+              </div>
+              <div>
+                  <strong>Carpet Area:</strong>
+                  320 square meters
+              </div>
+              <div>
+                  <strong>Furnishing Type:</strong>
+                  Fully-furnished
+              </div>
+          </div>
 
-  <button (click)="onNext()" class="btn btn-primary">Next Page</button>
+          <div class="card-footer">
+              <div class="btn-group d-flex">
+                  <!-- <button class="btn btn-primary btn-item">Like</button>
+                  <button class="btn btn-success">Message</button> -->
+                  <label class="btn btn-outline-primary radio custom-radio-button btn-item" btnRadio=1 role="button" tabindex="0">Like</label>
+                  <label class="btn btn-outline-primary custom-radio-button" btnRadio=2 role="button" tabindex="0">Message</label>
+              </div>
+          </div>
+      </div>
+  </div>
 
-  <br/> <br/>
+  <div class="col-sm-8 p-0">
+      <div class="tab-panel">
+          <tabset class="member-tabset">
+              <tab heading="Overview" customClass="customClass">
 
-  <button routerLink="/property-details/1" class="btn btn-primary">1</button>
-  <button routerLink="/property-details/2" class="btn btn-primary">2</button>
-  <button routerLink="/property-details/3" class="btn btn-primary">3</button>
-  <button [routerLink]="['/property-details', '4']" class="btn btn-primary">4</button>
-</p>
+              </tab>
+
+              <tab heading="Address" customClass="customClass">
+
+              </tab>
+
+              <tab heading="Photos" customClass="customClass">
+                  <h1>Photos</h1>
+              </tab>
+
+              <tab heading="Contact" customClass="customClass">
+                  <h1>Contact Detail</h1>
+                  This should be restricted area and only registered user should be able to see seller contact details
+              </tab>
+          </tabset>
+      </div>
+  </div>
+</div>
