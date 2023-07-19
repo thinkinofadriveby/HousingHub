@@ -87,3 +87,9 @@ h1 {
 .rtm {
     margin-left: 4px;
 }
+
+.btn-background {
+    background-color: #14C164 !important;
+    border: 1px solid black !important;
+    color: white;
+}
