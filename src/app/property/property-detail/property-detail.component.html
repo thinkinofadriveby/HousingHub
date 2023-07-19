@@ -8,7 +8,9 @@
           <div class="card-body">
               <h1 class="card-title card-info">{{property.Name}}</h1>
               <div class="card-info">
-                  <strong>{{property.BHK}} BHK, {{property.PType}}, {{property.Price}}$</strong>
+                  <strong>{{property.BHK}} BHK, {{property.PType}}, 
+                    <span class="price"> {{property.Price}}<em>$</em></span>
+                </strong>
               </div>
               <div class="card-info">
                   <strong>in {{property.City}}</strong>
@@ -16,7 +18,7 @@
               <hr>
               <div class="card-info">
                   <strong class="space">Build Area: </strong>
-                  {{property.BuiltArea}} square meters
+                  <div>{{property.BuiltArea}} square meters </div>
               </div>
               <div class="card-info">
                 <strong class="space">Carpet Area: </strong>
