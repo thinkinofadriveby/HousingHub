@@ -14,6 +14,9 @@ export class PropertyListComponent implements OnInit {
 
   SellRent = 1;
   properties: Array<IProperty> = []; 
+  City = '';
+  searchCity: any;
+  sortDirection = 'asc';
   
   constructor(private route: ActivatedRoute, private housingService: HousingService) { }
 
@@ -34,4 +37,28 @@ export class PropertyListComponent implements OnInit {
       );
     });
   }
-}  
+
+  onCityFilter() {
+    this.searchCity = this.City;
+  }
+
+  onCityFilterClear() {
+    this.City = '';
+    this.searchCity = '';
+  } 
+
+  onSortDirection() {
+    if (this.sortDirection === 'desc') {
+      this.sortDirection = 'asc'
+    }
+    else {
+      this.sortDirection = 'desc'
+    }
+  }
+
+  sortByParameter() {
+  }
+
+
+
+}

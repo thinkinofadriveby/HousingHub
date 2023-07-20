@@ -12,12 +12,14 @@ export class FilterPipe implements PipeTransform {
     }
     
     for (const item of value) {
-      if (item[propName] === filterString ) {
+      // Check if the property contains the filter string, not just an exact match.
+      if (item[propName].toLowerCase().includes(filterString.toLowerCase())) {
         resultArray.push(item);
       }
     }
 
     return resultArray;
   }
+
 
 }
