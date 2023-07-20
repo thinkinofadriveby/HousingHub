@@ -14,7 +14,6 @@ export class PropertyListComponent implements OnInit {
 
   SellRent = 1;
   properties: Array<IProperty> = []; 
-  Today = new Date();
   
   constructor(private route: ActivatedRoute, private housingService: HousingService) { }
 
